@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+/*font-family: 'Roboto', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding: 10px;
+    color: #333;
+    background-color: #e1e1e1;
+    height: 80px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+}
+
+main {
+    height: calc(100vh - 80px);
+    padding: 10px;
+    color: #e1e1e1;
+    background-color: #333;
+}
+
+#display {
+    display: flex;
+    width: 750px;
+    margin: 10px auto;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#score-board {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 10px auto;
+    border: solid 2px #e1e1e1;
+    border-radius: 4px;
+    font-size: 4rem;
+    line-height: 6rem;
+    text-align: center;
+}
+
+.side {
+    position: absolute;
+    top: 30px;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: #E2584D;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+#user {
+    left: -25px;
+}
+
+#comp {
+    right: -25px;
+}
+
+#choices {
+    display: flex;
+    width: 450px;
+    margin: 10px auto;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice {
+    flex-basis: 150px;
+    margin: 5px;
+    transition: all 0.2s ease-in-out 0.1s;
+}
+
+.choice:hover {
+    filter: hue-rotate(45deg);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.choice img {
+    width: 100%;
+    border-radius: 50%;
+    border: solid 5px #e1e1e1;
+}
+
+.choice img:active {
+    border: solid 5px #E2584D;
+}
+
+@keyframes glow {
+    from {
+        border: solid 5px #e1e1e1;
+    }
+    to {
+        border: solid 10px rgb(34, 238, 34);
+    }
+}
+
+.glow {
+    animation: glow 0.3s linear 3 alternate running backwards;
+}
+
+#status {
+    width: 200px;
+    margin: 10px auto;
+}
