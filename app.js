@@ -26,7 +26,7 @@ function compChoice() {
 
 function win(user, comp) {
     scoreUser++;
-    const message = `${choicesTable[user]} beats ${choicesTable[comp]}. You wins! 😎`;
+    const message = `${choicesTable[user]} beats ${choicesTable[comp]}. You win! 😎`;
     displayScore(true, user, comp, message);
 
 }
